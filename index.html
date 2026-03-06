@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, viewport-fit=cover" />
+  <title>Calculadora de Interes Compuesto 2026 | Calcula el Rendimiento de tu Ahorro</title>
+  <meta name="description"
+    content="Calculadora de Interes Compuesto avanzada y gratuita. Calcula el crecimiento de tu inversion, ajusta por inflacion, impuestos, comisiones y retiros mensuales.">
+  <meta name="keywords"
+    content="calculadora interes compuesto, interes compuesto, inversion inteligente, finanzas personales, calculadora financiera, cagr, valor real inflacion, dividendos, ahorro">
+  <meta name="author" content="FinanzasInteligentes.com" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://interes-compuesto-sigma.vercel.app/" />
+
+  <!-- Schema.org JSON-LD para SEO -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialCalculator",
+      "name": "Calculadora de Interes Compuesto Avanzada",
+      "description": "Herramienta gratuita para calcular el interes compuesto con aportes, inflacion, impuestos y comisiones.",
+      "url": "https://interes-compuesto-sigma.vercel.app/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All"
+    }
+  </script>
+  <meta property="og:title" content="Calculadora de Interes Compuesto | Descubre el Poder de tu Dinero" />
+  <meta property="og:description"
+    content="Calcula en segundos cuanto crecera tu dinero. Soporta euros y dolares, aportes mensuales, inflacion y grafico de crecimiento detallado." />
+  <meta property="og:type" content="website" />
+
+  <script src="https://5gvci.com/act/files/tag.min.js?z=10675766" data-cfasync="false" async></script>
+  <script src="https://quge5.com/88/tag.min.js" data-zone="215958" async data-cfasync="false"></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora de Interes Compuesto","description":"Herramienta gratuita para calcular el rendimiento del ahorro e inversion mediante interes compuesto en euros y dolares.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Que es el interes compuesto?","acceptedAnswer":{"@type":"Answer","text":"El interes compuesto es un mecanismo financiero en el que los intereses generados se suman al capital y, en el siguiente periodo, generan nuevos intereses. Produce un crecimiento exponencial del dinero con el tiempo."}},{"@type":"Question","name":"Que es el CAGR?","acceptedAnswer":{"@type":"Answer","text":"El CAGR (Compound Annual Growth Rate) es la tasa de crecimiento anual compuesta que resume la rentabilidad de una inversion de forma homogenea, eliminando la volatilidad interanual."}},{"@type":"Question","name":"Cual es la diferencia entre interes simple e interes compuesto?","acceptedAnswer":{"@type":"Answer","text":"El interes simple siempre se calcula sobre el capital original generando crecimiento lineal. El interes compuesto reinvierte los intereses generando crecimiento exponencial que se acelera con el tiempo."}}]}
+  </script>
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,400&family=Figtree:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="cookie-bar" id="cookieBar">
+    <span>Usamos cookies para mejorar la experiencia y mostrar publicidad relevante. Consulta nuestra <a
+        onclick="showLegal('cookies')" style="cursor:pointer">Politica de Cookies</a>.</span>
+    <button class="btn-cookie" onclick="acceptCookies()">Aceptar</button>
+  </div>
+
+  <header>
+    <div class="nav-inner">
+      <div class="logo">Finanzas<span>Inteligentes</span></div>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="mainNav">
+        <a href="#calculadora">Calculadora</a>
+        <a href="#aprender">Aprender</a>
+        <a href="#faq">FAQ</a>
+        <a href="#recomendaciones">Inversiones</a>
+        <a onclick="showLegal('contacto')" style="cursor:pointer">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainContent">
+
+
+    <section class="hero">
+      <div class="hero-inner fade-up">
+        <div class="hero-label">Herramienta gratuita de calculo financiero</div>
+        <h1>Calcula el Crecimiento<br>de tu <em>Interes Compuesto</em></h1>
+        <p class="hero-sub">Visualiza exactamente cuanto crecera tu dinero. Euros y dolares, aportes mensuales,
+          inflacion real y desglose anual completo.</p>
+        <a href="#calculadora" class="btn-hero">Calcular mi Rendimiento</a>
+      </div>
+      <div class="hero-metrics fade-up delay-2">
+        <div class="hero-metric"><strong>+500K</strong><span>Calculos realizados</span></div>
+        <div class="hero-metric"><strong>100%</strong><span>Gratuito y sin registro</span></div>
+        <div class="hero-metric"><strong>EUR / USD</strong><span>Soporte doble moneda</span></div>
+      </div>
+    </section>
+
+
+    <div class="container">
+      <div class="ad-zone ad-leaderboard"></div>
+    </div>
+
+
+    <section class="section-calc" id="calculadora">
+      <div class="sec-header fade-up">
+        <span class="sec-eyebrow">Herramienta principal</span>
+        <h2>Calculadora de Interes Compuesto</h2>
+        <p>Introduce tus datos y obtendra resultados instantaneos con grafico de crecimiento y tabla de desglose anual.
+        </p>
+      </div>
+
+
+      <div class="currency-toggle">
+        <button class="currency-btn active" id="btn-eur" onclick="setCurrency('EUR')">EUR — Euro</button>
+        <button class="currency-btn" id="btn-usd" onclick="setCurrency('USD')">USD — Dolar</button>
+      </div>
+
+      <div class="calc-card fade-up delay-1">
+
+
+        <div class="calc-top">
+
+
+          <div class="form-panel">
+            <p class="form-panel-title">Parametros de la Inversion</p>
+            <div class="form-grid">
+
+
+              <div class="field">
+                <label for="capital">Capital Inicial</label>
+                <div class="input-wrap has-pfx">
+                  <span class="pfx" id="pfx-cap">€</span>
+                  <input type="number" id="capital" value="10000" min="0" step="100" />
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="aporte">Aporte Periodico <span class="hint">Opcional</span></label>
+                <div class="input-wrap has-pfx">
+                  <span class="pfx" id="pfx-apt">€</span>
+                  <input type="number" id="aporte" value="200" min="0" step="10" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="frecuencia_aporte">Frecuencia de Aporte</label>
+                <select id="frecuencia_aporte">
+                  <option value="12">Mensual</option>
+                  <option value="26">Quincenal</option>
+                  <option value="52">Semanal</option>
+                  <option value="1">Anual</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="incremento_aporte">Crecimiento Anual Aporte <span
+                    class="hint">Inflacion/Salario</span></label>
+                <div class="input-wrap has-sfx">
+                  <input type="number" id="incremento_aporte" value="0" min="0" max="100" step="0.5" />
+                  <span class="sfx">%</span>
+                </div>
+              </div>
+
+
+              <div class="field full">
+                <label for="tasa-slider">Tasa de Interes Anual</label>
+                <div class="slider-row">
+                  <input type="range" id="tasa-slider" aria-label="Tasa de Interes Anual" min="0.1" max="25" step="0.1"
+                    value="7" oninput="syncTasa(this.value)" />
+                  <div class="input-wrap has-sfx" style="width:100px;flex-shrink:0">
+                    <input type="number" id="tasa" aria-label="Tasa numérica" value="7" min="0.1" max="100" step="0.1"
+                      oninput="syncSlider(this.value)" style="text-align:center;padding-right:28px" />
+                    <span class="sfx">%</span>
+                  </div>
+                  <span class="slider-val" id="tasa-lbl">7.0%</span>
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="anios">Periodo</label>
+                <div class="input-wrap has-sfx">
+                  <input type="number" id="anios" value="20" min="1" max="60" step="1" />
+                  <span class="sfx" style="font-size:.78rem;color:var(--text-4)">años</span>
+                </div>
+              </div>
+
+
+              <div class="field">
+                <label for="capitalizacion">Capitalizacion</label>
+                <select id="capitalizacion">
+                  <option value="12">Mensual</option>
+                  <option value="1">Anual</option>
+                  <option value="4">Trimestral</option>
+                  <option value="365">Diaria</option>
+                </select>
+              </div>
+
+
+              <div class="field">
+                <label for="inflacion">Inflacion Anual <span class="hint">Para valor real</span></label>
+                <div class="input-wrap has-sfx">
+                  <input type="number" id="inflacion" value="2.5" min="0" max="30" step="0.1" />
+                  <span class="sfx">%</span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="comisiones">Comisiones Anuales <span class="hint">Gestion/Brokers</span></label>
+                <div class="input-wrap has-sfx">
+                  <input type="number" id="comisiones" value="0.5" min="0" max="10" step="0.01" />
+                  <span class="sfx">%</span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="retiro">Retiro Mensual <span class="hint">Monto a extraer</span></label>
+                <div class="input-wrap has-pfx">
+                  <span class="pfx" id="pfx-ret">€</span>
+                  <input type="number" id="retiro" value="0" min="0" step="10" />
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="impuestos">Impuestos <span class="hint">Ganancias Capital</span></label>
+                <div class="input-wrap has-sfx">
+                  <input type="number" id="impuestos" value="0" min="0" max="50" step="1" />
+                  <span class="sfx">%</span>
+                </div>
+              </div>
+
+            </div>
+            <button class="btn-calc" onclick="calcular()">Calcular Rendimiento</button>
+            <div class="calc-info-box fade-up">
+              <strong>El Poder del Interes Compuesto</strong>
+              La clave de un crecimiento exponencial asombroso reside en la constancia. Cada pequeño aporte y la
+              paciencia para no interrumpir el proceso de capitalizacion hacen la mayor diferencia a largo plazo.
+            </div>
+          </div>
+
+
+          <div class="result-panel">
+            <p class="result-panel-title">Proyeccion de tu Inversion</p>
+
+            <div class="res-main">
+              <div class="res-main-label">Monto Final Estimado</div>
+              <div class="res-main-amount" id="res-final">€0</div>
+              <div class="res-badge" id="res-pct">+0% rendimiento total</div>
+            </div>
+
+            <div class="res-row">
+              <span class="res-row-label">Total invertido</span>
+              <span class="res-row-val" id="res-invertido">€0</span>
+            </div>
+            <div class="res-row">
+              <span class="res-row-label">Intereses ganados</span>
+              <span class="res-row-val green" id="res-interes">€0</span>
+            </div>
+
+            <hr class="res-divider" />
+
+            <div class="res-row">
+              <span class="res-row-label">CAGR efectivo</span>
+              <span class="res-row-val gold" id="res-cagr">0.00%</span>
+            </div>
+            <div class="res-row">
+              <span class="res-row-label">Valor real (ajust. inflacion)</span>
+              <span class="res-row-val" id="res-real">€0</span>
+            </div>
+            <div class="res-row">
+              <span class="res-row-label">Capital final despues impuestos</span>
+              <span class="res-row-val green" id="res-impuestos">€0</span>
+            </div>
+            <div class="res-row">
+              <span class="res-row-label">Multiplicador del capital</span>
+              <span class="res-row-val green" id="res-mult">x0.00</span>
+            </div>
+            <div class="res-row">
+              <span class="res-row-label">Interes ultimo año</span>
+              <span class="res-row-val" id="res-ultimo">€0</span>
+            </div>
+
+            <div class="metrics-legend">
+              <div class="legend-item">
+                <strong>CAGR:</strong> Rentabilidad media anual ponderada de tu inversion.
+              </div>
+              <div class="legend-item">
+                <strong>Valor Real:</strong> El valor de tu dinero descontando la inflacion (poder de compra).
+              </div>
+              <div class="legend-item">
+                <strong>Capital Neto:</strong> Dinero real disponible tras pagar impuestos sobre ganancias.
+              </div>
+            </div>
+
+            <p class="res-note">Estimacion orientativa. No es asesoramiento financiero.</p>
+          </div>
+        </div>
+
+
+        <div class="calc-bottom">
+          <div class="chart-tabs">
+            <button class="chart-tab active" onclick="switchTab('v-bar',this)">Crecimiento Total</button>
+            <button class="chart-tab" onclick="switchTab('v-line',this)">Evolucion vs Inflacion</button>
+            <button class="chart-tab" onclick="switchTab('v-tabla',this)">Desglose Anual</button>
+          </div>
+          <div class="chart-view active" id="v-bar"><canvas id="chartBar"></canvas></div>
+          <div class="chart-view" id="v-line"><canvas id="chartLine"></canvas></div>
+          <div class="chart-view" id="v-tabla">
+            <div class="table-scroll">
+              <table class="breakdown-table" id="breakdown">
+                <thead>
+                  <tr>
+                    <th style="text-align:left">Año</th>
+                    <th>Capital Aportado</th>
+                    <th>Interes Acumulado</th>
+                    <th>Valor Total</th>
+                    <th>Interes del Año</th>
+                    <th>Valor Real</th>
+                  </tr>
+                </thead>
+                <tbody id="breakdownBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="container">
+      <div class="ad-zone ad-banner"></div>
+    </div>
+
+
+    <section class="section-content" id="aprender">
+
+      <h2>Que es el Interes Compuesto y por que es la Base de toda Inversion Inteligente</h2>
+
+      <p>El <strong>interes compuesto</strong> es el mecanismo financiero mas poderoso que existe para hacer crecer el
+        dinero a largo plazo. La idea es sencilla pero su impacto es extraordinario: los intereses que genera tu capital
+        no desaparecen al final de cada periodo, sino que se suman al capital principal y, desde ese momento, tambien
+        generan nuevos intereses. Es decir, ganas intereses sobre tus intereses.</p>
+
+      <p>Este efecto acumulativo produce un crecimiento <strong>exponencial</strong>, no lineal. En los primeros años
+        apenas es visible, pero con el paso del tiempo el dinero se multiplica a un ritmo cada vez mayor. Por eso, el
+        tiempo invertido es tan valioso o mas que el capital inicial.</p>
+
+      <div class="callout">
+        <strong>Dato clave:</strong> Segun estudios historicos, quien invirtio de forma consistente durante 30 años en
+        un fondo indexado global ha multiplicado su capital entre 7 y 15 veces, incluyendo periodos de crisis y
+        recesion. La clave es mantener la inversion y reinvertir los rendimientos.
+      </div>
+
+      <h2>La Formula Completa del Interes Compuesto con Aportes Periodicos</h2>
+
+      <p>Para entender los calculos que realiza nuestra herramienta, es util conocer la formula matematica completa que
+        incluye tanto el capital inicial como los aportes mensuales:</p>
+
+      <div class="formula-block">
+        <span class="var">M</span> <span class="op">=</span> <span class="var">C</span> <span class="op">x</span> (1
+        <span class="op">+</span> <span class="var">r</span><span class="op">/</span><span class="var">n</span>)<span
+          class="op">^</span>(<span class="var">n</span><span class="op">x</span><span class="var">t</span>) <span
+          class="op">+</span> <span class="var">A</span> <span class="op">x</span> [((1 <span class="op">+</span> <span
+          class="var">r</span><span class="op">/</span><span class="var">n</span>)<span class="op">^</span>(<span
+          class="var">n</span><span class="op">x</span><span class="var">t</span>) <span class="op">-</span> 1) <span
+          class="op">/</span> (<span class="var">r</span><span class="op">/</span><span class="var">n</span>)]
+      </div>
+
+      <p>Donde cada variable representa: <strong>M</strong> es el monto final; <strong>C</strong> el capital inicial;
+        <strong>r</strong> la tasa de interes anual en decimal (7% = 0.07); <strong>n</strong> el numero de
+        capitalizaciones por año (mensual = 12); <strong>t</strong> el tiempo en años; y <strong>A</strong> el aporte
+        mensual adicional.
+      </p>
+
+      <p>Ademas de este calculo, nuestra calculadora proporciona el <strong>CAGR</strong> (Tasa de Crecimiento Anual
+        Compuesta), el <strong>valor real ajustado por inflacion</strong>, el <strong>multiplicador del capital</strong>
+        y el <strong>interes generado en el ultimo año</strong>, metricas que utilizan a diario los inversores
+        profesionales.</p>
+
+      <h2>Ejemplo Real: Una Inversion a 25 Años con Aportes Mensuales</h2>
+
+      <p>Supongamos que se invierten <strong>10.000 euros o dolares de capital inicial</strong> en un fondo indexado
+        global, con un aporte mensual de <strong>300 unidades de la moneda elegida</strong>. Se usa una rentabilidad
+        historica conservadora del <strong>7% anual</strong> con capitalizacion mensual. La inflacion estimada es del
+        2.5%.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Periodo</th>
+            <th>Total aportado</th>
+            <th>Interes ganado</th>
+            <th>Monto final</th>
+            <th>Valor real</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>5 años</td>
+            <td>28.000</td>
+            <td class="pos">10.890</td>
+            <td class="pos">38.890</td>
+            <td>34.200</td>
+          </tr>
+          <tr>
+            <td>10 años</td>
+            <td>46.000</td>
+            <td class="pos">36.100</td>
+            <td class="pos">82.100</td>
+            <td>63.900</td>
+          </tr>
+          <tr>
+            <td>15 años</td>
+            <td>64.000</td>
+            <td class="pos">89.500</td>
+            <td class="pos">153.500</td>
+            <td>105.000</td>
+          </tr>
+          <tr>
+            <td>20 años</td>
+            <td>82.000</td>
+            <td class="pos">198.300</td>
+            <td class="pos">280.300</td>
+            <td>167.000</td>
+          </tr>
+          <tr>
+            <td>25 años</td>
+            <td>100.000</td>
+            <td class="pos">409.700</td>
+            <td class="pos">509.700</td>
+            <td>263.000</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>En 25 años se habra aportado 100.000 de capital propio y el interes compuesto habra generado mas de 409.000
+        adicionales. El capital se habra multiplicado por mas de cinco veces. Incluso ajustando por inflacion, el valor
+        real supera con creces lo aportado.</p>
+
+      <h3>Por que Empezar Antes Vale mas que Invertir mas</h3>
+
+      <p>Una de las paradojas mas fascinantes del interes compuesto es que empezar antes vale mas que invertir
+        cantidades mayores. Si una persona empieza a invertir 200 unidades al mes a los 25 años y otra empieza con 400
+        al mes a los 35, ambas con un rendimiento del 7%, la primera terminara con mas capital a los 65 años habiendo
+        aportado la mitad. Cada decada de retraso en empezar tiene un coste enorme en el resultado final.</p>
+
+      <h2>Interes Compuesto vs Interes Simple: la Diferencia que Importa</h2>
+
+      <p>El <strong>interes simple</strong> calcula los beneficios siempre sobre el capital original. Cada año se gana
+        exactamente el mismo importe sin importar cuanto tiempo haya pasado. El crecimiento es lineal, predecible y poco
+        eficiente a largo plazo.</p>
+
+      <p>El <strong>interes compuesto</strong> reinvierte los intereses generados de modo que cada periodo el capital
+        base es mayor. El crecimiento se acelera con el tiempo de forma exponencial, lo que produce diferencias enormes
+        a plazos de 20 o 30 años.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Caracteristica</th>
+            <th>Interes Simple</th>
+            <th>Interes Compuesto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Base de calculo</td>
+            <td>Capital original siempre</td>
+            <td class="pos">Capital mas intereses acumulados</td>
+          </tr>
+          <tr>
+            <td>Tipo de crecimiento</td>
+            <td class="neg">Lineal</td>
+            <td class="pos">Exponencial</td>
+          </tr>
+          <tr>
+            <td>10.000 al 7% en 10 años</td>
+            <td class="neg">17.000</td>
+            <td class="pos">19.671</td>
+          </tr>
+          <tr>
+            <td>10.000 al 7% en 30 años</td>
+            <td class="neg">31.000</td>
+            <td class="pos">76.123</td>
+          </tr>
+          <tr>
+            <td>10.000 al 7% en 40 años</td>
+            <td class="neg">38.000</td>
+            <td class="pos">149.745</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Que es el CAGR y Como Interpretarlo</h2>
+
+      <p>El <strong>CAGR</strong> (Compound Annual Growth Rate, o Tasa de Crecimiento Anual Compuesta) expresa la tasa
+        de crecimiento constante que habria necesitado una inversion para pasar de su valor inicial al valor final en un
+        periodo determinado. Es la metrica estandar usada por gestores de fondos, analistas y plataformas de inversion
+        para comparar rendimientos de forma homogenea, eliminando el ruido de la volatilidad interanual.</p>
+
+      <p>Nuestra calculadora lo calcula automaticamente con la formula: <strong>CAGR = (Monto Final / Capital Total
+          Aportado)^(1/Años) - 1</strong>. Un CAGR del 7% significa que, en promedio compuesto, tu inversion ha crecido
+        un 7% cada año.</p>
+
+      <h3>Inflacion y Valor Real de tu Inversion</h3>
+
+      <p>Una cifra que muchas calculadoras omiten es el <strong>valor real ajustado por inflacion</strong>. Un monto
+        final de 500.000 en 30 años no equivale a 500.000 en moneda de hoy porque el poder adquisitivo habra disminuido.
+        Nuestra herramienta descuenta la inflacion introducida para mostrar cuanto vale el capital final en terminos
+        actuales, usando la formula: <strong>Valor Real = Monto Final / (1 + inflacion)^Años</strong>.</p>
+
+      <h2>Donde Invertir para Aprovechar el Interes Compuesto</h2>
+
+      <p>El interes compuesto puede aplicarse en multiples vehiculos de inversion disponibles internacionalmente:</p>
+
+      <ul>
+        <li><strong>Fondos indexados y ETFs:</strong> Replican indices como el S&amp;P 500, MSCI World o EURO STOXX 50.
+          Las comisiones son bajas y los dividendos se reinvierten automaticamente en fondos de acumulacion.</li>
+        <li><strong>Cuentas de ahorro remuneradas:</strong> Ofrecen entre 2% y 4.5% TAE segun la entidad, con
+          capitalizacion mensual o diaria. Ideales para el fondo de emergencia.</li>
+        <li><strong>Planes de pensiones y cuentas de jubilacion (IRA, 401k):</strong> Con ventajas fiscales que
+          amplifican el efecto compuesto al diferir o reducir impuestos.</li>
+        <li><strong>Bonos con reinversion de cupones:</strong> Los cupones recibidos se reinvierten comprando mas bonos,
+          aplicando el compuesto en renta fija.</li>
+        <li><strong>Depositos a plazo:</strong> Mayor seguridad pero menor rentabilidad. Opciones validas para el tramo
+          conservador de una cartera.</li>
+      </ul>
+
+      <h3>La Regla del 72: Cuanto Tarda en Doblarse tu Dinero</h3>
+
+      <p>Una regla practica ampliamente usada: divide 72 entre tu tasa de interes anual y obtendras aproximadamente el
+        numero de años que tardara en doblarse tu capital. Al 6% tardas 12 años. Al 9% tardas 8 años. Al 12% solo 6
+        años. Prueba distintas tasas en nuestra calculadora para visualizarlo en el grafico.</p>
+
+      <div class="callout">
+        <strong>Consejo importante:</strong> Una comision anual del 1% adicional puede parecer insignificante, pero a 30
+        años puede reducir tu patrimonio final hasta un 25%. El interes neto (rentabilidad menos comisiones y menos
+        inflacion) es lo unico que importa al comparar productos de inversion.
+      </div>
+
+    </section>
+
+
+    <div style="display:flex;justify-content:center;padding:0 0 20px">
+      <div class="ad-zone ad-rectangle"></div>
+    </div>
+
+
+    <section class="section-affiliate" id="recomendaciones">
+      <div class="sec-header">
+        <span class="sec-eyebrow">Comparativa de brokers</span>
+        <h2>Los 3 Mejores Brokers para Invertir desde Latinoamerica</h2>
+        <p>Analizamos las plataformas mas accesibles y confiables para inversores latinoamericanos que quieren
+          aprovechar el interes compuesto.</p>
+      </div>
+
+      <div style="max-width:1100px;margin:0 auto;overflow-x:auto;">
+        <table
+          style="width:100%;border-collapse:collapse;font-size:.88rem;background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);">
+          <thead>
+            <tr style="background:var(--navy-700);">
+              <th
+                style="padding:18px 20px;text-align:left;color:rgba(255,255,255,.5);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;width:180px;">
+                Caracteristica</th>
+
+
+              <th style="padding:22px 20px 18px;text-align:center;color:white;font-size:.95rem;font-weight:700;">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+
+                  <img
+                    src="https://cdn.prod.website-files.com/666790f2ab2abbf50334ea4e/66cd2f33f9e5941a0fd13269_logo-hapi-white.svg"
+                    alt="Hapi" width="60" height="60"
+                    style="border-radius:14px;object-fit:contain;box-shadow:var(--shadow-sm);border:1px solid rgba(255,255,255,.1);"
+                    onerror="this.onerror=null;this.outerHTML='<div class=\'logo-fallback hapi\'>H</div>';">
+                  <div>
+                    <div style="font-family:var(--font-display);font-size:1.15rem;color:var(--teal-400);line-height:1;">
+                      Hapi</div>
+                    <div style="font-size:.68rem;color:rgba(255,255,255,.4);font-weight:400;margin-top:3px;">App para
+                      LATAM</div>
+                  </div>
+                </div>
+              </th>
+
+
+              <th
+                style="padding:22px 20px 18px;text-align:center;color:white;font-size:.95rem;font-weight:700;border-left:1px solid rgba(255,255,255,.08);border-right:1px solid rgba(255,255,255,.08);">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Interactive_Brokers_Logo_%282014%29.svg"
+                    alt="Interactive Brokers" width="60" height="60"
+                    style="border-radius:14px;object-fit:contain;background:white;padding:5px;box-shadow:var(--shadow-sm);border:1px solid rgba(0,0,0,.05)"
+                    onerror="this.onerror=null;this.outerHTML='<div class=\'logo-fallback ibkr\'>IB</div>';">
+                  <div>
+                    <div style="font-family:var(--font-display);font-size:1.15rem;color:var(--gold-400);line-height:1;">
+                      Interactive Brokers</div>
+                    <div style="font-size:.68rem;color:rgba(255,255,255,.4);font-weight:400;margin-top:3px;">Para
+                      inversores serios</div>
+                  </div>
+                </div>
+              </th>
+
+
+              <th style="padding:22px 20px 18px;text-align:center;color:white;font-size:.95rem;font-weight:700;">
+                <div style="display:flex;flex-direction:column;align-items:center;gap:10px;">
+
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Etoro_logo.svg" alt="eToro" width="60"
+                    height="60"
+                    style="border-radius:14px;object-fit:contain;background:white;padding:5px;box-shadow:var(--shadow-sm);border:1px solid rgba(0,0,0,.05)"
+                    onerror="this.onerror=null;this.outerHTML='<div class=\'logo-fallback etoro\'>eT</div>';">
+                  <div>
+                    <div style="font-family:var(--font-display);font-size:1.15rem;color:#6c9bff;line-height:1;">eToro
+                    </div>
+                    <div style="font-size:.68rem;color:rgba(255,255,255,.4);font-weight:400;margin-top:3px;">Social
+                      trading y criptos</div>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Deposito minimo</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);font-weight:600;color:var(--teal-500);">
+                $1 USD</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);font-weight:600;color:var(--text-1);">
+                $0 (IBKR Lite)<br><span style="font-size:.78rem;color:var(--text-4);">$0–$10K recomendado para
+                  Pro</span></td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);font-weight:600;color:var(--text-1);">
+                $50 USD</td>
+            </tr>
+            <tr style="background:var(--surface);">
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Comisiones</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Sin comision por operacion<br><span style="font-size:.78rem;color:var(--teal-500);font-weight:600;">Cero
+                  en ETFs y acciones</span></td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);color:var(--text-2);">
+                Desde $0 (Lite) / $0.005 por accion (Pro)<br><span style="font-size:.78rem;color:var(--text-3);">Muy
+                  competitivo en volumen</span></td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Sin comision en acciones<br><span style="font-size:.78rem;color:var(--text-3);">Spread en criptos y
+                  CFDs</span></td>
+            </tr>
+            <tr>
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Disponibilidad en LATAM</td>
+              <td style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);"><span
+                  style="background:var(--teal-50);color:var(--teal-700);padding:4px 12px;border-radius:50px;font-size:.78rem;font-weight:700;">Mexico,
+                  Colombia, Peru y mas</span></td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);">
+                <span
+                  style="background:var(--gold-100);color:#7a5c00;padding:4px 12px;border-radius:50px;font-size:.78rem;font-weight:700;">Casi
+                  toda LATAM</span>
+              </td>
+              <td style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);"><span
+                  style="background:#eff3ff;color:#3355bb;padding:4px 12px;border-radius:50px;font-size:.78rem;font-weight:700;">Amplia
+                  cobertura LATAM</span></td>
+            </tr>
+            <tr style="background:var(--surface);">
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Instrumentos disponibles</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Acciones USA, ETFs<br><span style="font-size:.78rem;color:var(--text-3);">Fracciones disponibles</span>
+              </td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);color:var(--text-2);">
+                Acciones globales, ETFs, opciones, futuros, forex, bonos, criptos<br><span
+                  style="font-size:.78rem;color:var(--gold-400);font-weight:600;">La mayor variedad del mercado</span>
+              </td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Acciones, ETFs, criptos, CFDs<br><span style="font-size:.78rem;color:var(--text-3);">CopyTrading
+                  incluido</span></td>
+            </tr>
+            <tr>
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Regulacion</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                FINRA / SEC (EE.UU.)</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);color:var(--text-2);">
+                SEC, FINRA, FCA, y mas de 10 reguladores globales</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                FCA (UK), CySEC (EU), ASIC</td>
+            </tr>
+            <tr style="background:var(--surface);">
+              <td
+                style="padding:14px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);border-bottom:1px solid var(--border);">
+                Ideal para</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Inversores principiantes que quieren empezar con poco capital en acciones y ETFs de EE.UU.</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);border-left:1px solid var(--border);border-right:1px solid var(--border);color:var(--text-2);">
+                Inversores intermedios y avanzados que buscan acceso global y herramientas profesionales.</td>
+              <td
+                style="padding:14px 20px;text-align:center;border-bottom:1px solid var(--border);color:var(--text-2);">
+                Inversores que quieren diversificar con criptos y copiar estrategias de traders exitosos.</td>
+            </tr>
+            <tr>
+              <td
+                style="padding:18px 20px;font-weight:700;color:var(--text-3);font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;background:var(--surface-2);">
+                Puntaje general</td>
+              <td style="padding:18px 20px;text-align:center;">
+                <div
+                  style="font-family:var(--font-display);font-size:1.8rem;color:var(--teal-500);font-weight:700;line-height:1;">
+                  8.2<span style="font-size:.9rem;color:var(--text-4)">/10</span></div>
+                <div style="font-size:.75rem;color:var(--text-3);margin-top:4px;">Facil de usar</div>
+              </td>
+              <td
+                style="padding:18px 20px;text-align:center;border-left:1px solid var(--border);border-right:1px solid var(--border);">
+                <div
+                  style="font-family:var(--font-display);font-size:1.8rem;color:var(--gold-400);font-weight:700;line-height:1;">
+                  9.4<span style="font-size:.9rem;color:var(--text-4)">/10</span></div>
+                <div style="font-size:.75rem;color:var(--text-3);margin-top:4px;">Mas completo</div>
+              </td>
+              <td style="padding:18px 20px;text-align:center;">
+                <div
+                  style="font-family:var(--font-display);font-size:1.8rem;color:#6c9bff;font-weight:700;line-height:1;">
+                  8.0<span style="font-size:.9rem;color:var(--text-4)">/10</span></div>
+                <div style="font-size:.75rem;color:var(--text-3);margin-top:4px;">Mas social</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="aff-disclaimer" style="margin-top:32px;">Esta comparativa es de caracter informativo y educativo. Las
+        condiciones de cada plataforma pueden cambiar sin previo aviso. Verifica siempre los terminos vigentes en el
+        sitio oficial de cada broker antes de abrir una cuenta. Invertir implica riesgos; los rendimientos pasados no
+        garantizan resultados futuros. Consulta con un asesor financiero certificado si tienes dudas.</p>
+    </section>
+
+
+    <section class="section-faq" id="faq">
+      <div class="sec-header">
+        <span class="sec-eyebrow">Preguntas frecuentes</span>
+        <h2>Todo lo que Necesitas Saber</h2>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Que es el interes compuesto y como funciona?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>El interes compuesto es el proceso por el cual los intereses generados por una inversion se reinvierten en
+            el capital principal, generando a su vez nuevos intereses en los periodos siguientes. A diferencia del
+            interes simple, el interes compuesto produce un crecimiento exponencial. Con el tiempo, la mayor parte del
+            patrimonio final proviene de los intereses, no de las aportaciones del inversor.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Como calcula esta herramienta el interes compuesto?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>La calculadora aplica la formula estandar de interes compuesto con aportes periodicos: M = C x (1 + r/n)^(n
+            x t) + A x [((1 + r/n)^(n x t) - 1) / (r/n)]. Adicionalmente calcula el CAGR, el valor real ajustado por
+            inflacion, el multiplicador del capital y genera un desglose anual completo con el interes generado cada
+            año.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Que es el CAGR y por que es importante?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>El CAGR (Compound Annual Growth Rate) es la tasa de crecimiento anual compuesta que resume la rentabilidad
+            de una inversion de forma homogenea, eliminando la volatilidad interanual. Es la metrica estandar usada por
+            gestores de fondos y analistas para comparar distintas inversiones en igualdad de condiciones.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Cual es la diferencia entre capitalizacion mensual y anual?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>La capitalizacion mensual aplica los intereses 12 veces al año mientras que la anual solo una. Cuanto mas
+            frecuente sea la capitalizacion, mayor sera el rendimiento final. Un producto al 6% con capitalizacion
+            mensual equivale a un 6.17% efectivo anual (TAE). A 30 años, esta diferencia puede representar varios miles
+            de euros o dolares adicionales.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Por que se muestra el valor real ajustado por inflacion?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>El valor nominal de una inversion a futuro puede ser engañoso si no se descuenta la inflacion. 500.000 en
+            30 años tienen un poder adquisitivo equivalente a aproximadamente 260.000 de hoy con una inflacion media del
+            2.2%. Nuestra calculadora muestra el valor real para que la planificacion financiera sea mas precisa y
+            realista.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Puedo usar esta calculadora en dolares?<span
+            class="faq-icon">+</span></button>
+        <div class="faq-a">
+          <p>Si. La calculadora soporta tanto euros (EUR) como dolares (USD). Selecciona la moneda en el selector que
+            aparece sobre la calculadora. Todos los resultados, el grafico y la tabla de desglose anual se actualizaran
+            con el simbolo correcto. Los calculos matematicos son identicos en ambas monedas; solo cambia la
+            denominacion.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <div class="container">
+      <div class="ad-zone ad-banner"></div>
+    </div>
+
+  </main>
+
+  <div class="legal-page" id="page-privacidad">
+    <div class="legal-inner">
+      <h2>Politica de Privacidad</h2>
+      <span class="updated">Ultima actualizacion: 1 de enero de 2026</span>
+      <h3>1. Responsable del Tratamiento</h3>
+      <p>FinanzasInteligentes.com es responsable del tratamiento de los datos personales de los usuarios que accedan a
+        este sitio web.</p>
+      <h3>2. Datos que Recopilamos</h3>
+      <ul>
+        <li><strong>Formulario de contacto:</strong> nombre, correo electronico y mensaje.</li>
+        <li><strong>Cookies y tecnologias similares:</strong> datos de navegacion, direccion IP y preferencias.</li>
+        <li><strong>Google Analytics:</strong> datos estadisticos anonimizados sobre el uso del sitio.</li>
+        <li><strong>Google AdSense:</strong> datos de comportamiento para personalizar anuncios.</li>
+      </ul>
+      <h3>3. Finalidad del Tratamiento</h3>
+      <p>Tratamos los datos para responder consultas del formulario de contacto, mejorar la experiencia de usuario,
+        mostrar publicidad relevante a traves de Google AdSense y analizar el trafico del sitio con Google Analytics.
+      </p>
+      <h3>4. Base Legal</h3>
+      <p>El tratamiento se basa en el consentimiento del usuario y en el interes legitimo del responsable para el
+        analisis estadistico del sitio.</p>
+      <h3>5. Derechos del Usuario</h3>
+      <p>Tienes derecho a acceder, rectificar, suprimir, oponerte, limitar el tratamiento y portar tus datos. Puedes
+        ejercerlos enviando un correo a: <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+          data-cfemail="10606279667173797471745076797e717e6a7163797e64757c7977757e6475633e737f7d">[email&#160;protected]</a>
+      </p>
+      <h3>6. Google AdSense y Publicidad</h3>
+      <p>Este sitio usa Google AdSense para mostrar anuncios. Google puede usar cookies para personalizar los anuncios
+        segun tu historial de navegacion. Puedes gestionar tus preferencias en adssettings.google.com</p>
+      <h3>7. Marketing de Afiliados</h3>
+      <p>Algunas paginas de este sitio contienen enlaces de afiliados. Cuando haces clic en ellos y realizas un registro
+        o compra, podemos recibir una comision sin coste adicional para ti. Los enlaces de afiliados se identifican con
+        el atributo rel="sponsored".</p>
+      <h3>8. Conservacion de Datos</h3>
+      <p>Los datos del formulario de contacto se conservan durante el tiempo necesario para gestionar la consulta y un
+        maximo de 3 años. Los datos de cookies se eliminan segun lo indicado en nuestra Politica de Cookies.</p>
+    </div>
+  </div>
+
+  <div class="legal-page" id="page-cookies">
+    <div class="legal-inner">
+      <h2>Politica de Cookies</h2>
+      <span class="updated">Ultima actualizacion: 1 de enero de 2026</span>
+      <h3>Que son las Cookies</h3>
+      <p>Las cookies son pequenos archivos de texto que se almacenan en tu dispositivo cuando visitas un sitio web.
+        Permiten recordar tus preferencias y mejorar tu experiencia de navegacion.</p>
+      <h3>Cookies que Utilizamos</h3>
+      <table class="legal-table">
+        <thead>
+          <tr>
+            <th>Cookie</th>
+            <th>Tipo</th>
+            <th>Duracion</th>
+            <th>Finalidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>_ga, _gid</td>
+            <td>Analitica</td>
+            <td>2 años / 24h</td>
+            <td>Google Analytics: estadisticas anonimizadas</td>
+          </tr>
+          <tr>
+            <td>_gcl_au</td>
+            <td>Publicidad</td>
+            <td>3 meses</td>
+            <td>Google AdSense: medicion de conversiones</td>
+          </tr>
+          <tr>
+            <td>IDE, DSID</td>
+            <td>Publicidad</td>
+            <td>1 año</td>
+            <td>Google DoubleClick: personalizacion de anuncios</td>
+          </tr>
+          <tr>
+            <td>cookie_consent</td>
+            <td>Tecnica</td>
+            <td>1 año</td>
+            <td>Recordar la aceptacion de cookies</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Como Gestionar las Cookies</h3>
+      <p>Puedes configurar tu navegador para rechazar todas las cookies o para que te avise cuando se instale una. Sin
+        embargo, algunas funcionalidades del sitio pueden no funcionar correctamente si desactivas las cookies tecnicas.
+      </p>
+    </div>
+  </div>
+
+  <div class="legal-page" id="page-terminos">
+    <div class="legal-inner">
+      <h2>Terminos y Condiciones</h2>
+      <span class="updated">Ultima actualizacion: 1 de enero de 2026</span>
+      <h3>1. Aceptacion de los Terminos</h3>
+      <p>Al acceder y usar este sitio web, aceptas estos Terminos y Condiciones en su totalidad.</p>
+      <h3>2. Descripcion del Servicio</h3>
+      <p>FinanzasInteligentes.com ofrece herramientas de calculo financiero y contenido educativo sobre finanzas
+        personales e inversion. Todas las herramientas son gratuitas y con fines meramente informativos.</p>
+      <h3>3. Limitacion de Responsabilidad</h3>
+      <p>La informacion proporcionada en este sitio es de caracter educativo y no constituye asesoramiento financiero,
+        fiscal, legal ni de inversion. Los calculos son estimaciones basadas en los datos introducidos por el usuario.
+        No nos responsabilizamos de las decisiones financieras tomadas basandose en la informacion de este sitio.</p>
+      <h3>4. Propiedad Intelectual</h3>
+      <p>Todo el contenido del sitio es propiedad de FinanzasInteligentes.com o de sus licenciantes. Queda prohibida su
+        reproduccion sin autorizacion expresa.</p>
+      <h3>5. Publicidad y Afiliados</h3>
+      <p>Este sitio muestra anuncios de terceros a traves de Google AdSense y puede contener enlaces de afiliados. El
+        contenido editorial es independiente de los acuerdos comerciales.</p>
+      <h3>6. Ley Aplicable</h3>
+      <p>Estos terminos se rigen por la legislacion internacional aplicable al domicilio del usuario.</p>
+    </div>
+  </div>
+
+  <div class="legal-page" id="page-contacto">
+    <div class="legal-inner">
+      <h2>Contacto</h2>
+      <span class="updated">Responderemos en un plazo maximo de 48 horas habiles.</span>
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/hola@finanzasinteligentes.com"
+        method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde la Calculadora!">
+        <input type="hidden" name="_template" value="table">
+        <div class="contact-grid">
+          <div class="field"><label for="con-nombre">Nombre completo</label><input type="text" name="name"
+              id="con-nombre" placeholder="Tu nombre completo" required /></div>
+          <div class="field"><label for="con-email">Correo electronico</label><input type="email" name="email"
+              id="con-email" placeholder="tu@email.com" required /></div>
+          <div class="field full"><label for="con-asunto">Asunto</label>
+            <select name="subject" id="con-asunto">
+              <option>Consulta general</option>
+              <option>Error en la calculadora</option>
+              <option>Colaboracion / Afiliados</option>
+              <option>Solicitud de privacidad</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="field full"><label for="con-mensaje">Mensaje</label><textarea name="message" id="con-mensaje"
+              placeholder="Escribe tu consulta aqui..." required></textarea></div>
+        </div>
+        <div class="checkbox-row" style="margin:24px 0 18px">
+          <input type="checkbox" id="con-legal" required />
+          <label for="con-legal">He leido y acepto la <a onclick="showLegal('privacidad')"
+              style="cursor:pointer">Politica de Privacidad</a>.</label>
+        </div>
+        <button type="submit" class="btn-calc" id="btn-submit">Enviar Mensaje</button>
+        <div class="contact-success" id="contact-success">Mensaje enviado correctamente. Nos pondremos en contacto
+          pronto.</div>
+      </form>
+      <h3 style="margin-top:44px">Otros Canales</h3>
+      <p>Correo electronico: <a href="mailto:hola@finanzasinteligentes.com">hola@finanzasinteligentes.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo" style="color:white">Finanzas<span style="color:var(--teal-400)">Inteligentes</span></div>
+          <p>Herramienta gratuita de calculo financiero. Educacion sobre interes compuesto, ahorro e inversion
+            internacional en euros y dolares. Informacion con fines educativos, no asesoramiento financiero.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-title">Herramientas</p>
+          <a href="#calculadora">Calculadora Interes Compuesto</a>
+          <a href="#recomendaciones">Comparador de Productos</a>
+          <a href="#faq">Preguntas Frecuentes</a>
+          <a href="#aprender">Guia de Inversion</a>
+        </div>
+        <div class="footer-col">
+          <p class="footer-title">Legal</p>
+          <a onclick="showLegal('privacidad')">Politica de Privacidad</a>
+          <a onclick="showLegal('cookies')">Politica de Cookies</a>
+          <a onclick="showLegal('terminos')">Terminos y Condiciones</a>
+          <a onclick="showLegal('contacto')">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 interes-compuesto-sigma.vercel.app — Todos los derechos reservados.</span>
+        <span>Informacion meramente educativa. No constituye asesoramiento financiero.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
